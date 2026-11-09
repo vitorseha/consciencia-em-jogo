@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html,
@@ -14,4 +15,9 @@ body,
 
 body {
   min-height: 100vh;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
