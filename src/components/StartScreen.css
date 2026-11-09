@@ -80,25 +80,9 @@
 }
 
 .start-button {
-  margin-top: 1rem;
-  margin-left: 1rem;
-  padding: 1rem 2rem;
-
-  border: none;
-  border-radius: 14px;
-
   background-color: #292329;
   color: white;
-
-  font-family: "Baloo 2", sans-serif;
-  font-size: 1.1rem;
-  font-weight: 900;
-
-  cursor: pointer;
-
   box-shadow: 0 5px 0 #171419;
-
-  transition: all 0.2s ease;
 }
 
 .start-button:hover {
@@ -158,5 +142,20 @@
 
   .start-footer {
     margin-top: 25px;
+  }
+
+  /* Botões um embaixo do outro no mobile */
+  .btnContainer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .start-button,
+  .restart-button,
+  .form-button {
+    width: 100%;
+    margin: 0 0 1rem 0;
+    padding: 0.8rem 1rem;
+    font-size: 0.85rem;
   }
 }

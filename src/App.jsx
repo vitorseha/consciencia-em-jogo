@@ -293,7 +293,7 @@ function App() {
           </p>
 
           <button
-            className="restart-button"
+            className="start-button"
             onClick={restartGame}
           >
             JOGAR NOVAMENTE

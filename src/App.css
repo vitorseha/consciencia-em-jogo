@@ -279,19 +279,21 @@
 ========================= */
 
 .wheel-screen {
+  width: 100%;
   min-height: 100vh;
+  box-sizing: border-box;
+
   padding: 3rem 1.5rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  background:
-    radial-gradient(
-      circle at top,
-      #3a303a 0%,
-      #292329 55%
-    );
+  background: radial-gradient(
+    circle at top,
+    #3a303a 0%,
+    #292329 55%
+  );
 
   color: white;
 }
@@ -344,6 +346,8 @@
   padding: 1em;
   border-radius: 1em;
   border: 1px solid #cccc;
+  text-align: justify;
+  text-indent: 1em
 }
 
 .category-container {
@@ -397,12 +401,10 @@
 }
 
 .game-container {
+  min-height: 100vh;
+  width: 100%;
   background-color: #292329;
-  padding: 0em 2em;
-  height: 100vh;
-  overflow: hidden;
 }
-
 
 /* Resposta correta */
 .choices.choice-correct {
@@ -480,6 +482,8 @@
   padding: 1em;
   border-radius: 1em;
   text-align: left;
+  text-align: justify;
+  text-indent: 1em
 }
 
 .feedback-explanation h3 {
@@ -492,6 +496,9 @@
   line-height: 1.5;
 }
 
+.question-screen{
+  padding: 0 1em;
+}
 
 /* Animações */
 @keyframes overlayAppear {
@@ -666,55 +673,65 @@
   color: #3d3030;
 }
 
-.restart-button {
-  margin-top: 1rem;
-  padding: 1rem 2rem;
-
-  border: none;
-  border-radius: 14px;
-
-  background-color: #292329;
-  color: #fffaf0;
-
-  font-family: "Baloo 2", sans-serif;
-  font-size: 1.1rem;
-  font-weight: 900;
-
-  cursor: pointer;
-
-  box-shadow: 0 5px 0 #151115;
-
-  transition: all 0.2s ease;
-}
-
-.restart-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 7px 0 #151115;
+.start-button, .form-button{
+margin-top: 1rem;
+margin-left: 1rem;
+padding: 1rem 2rem;
+border: none;
+border-radius: 14px;
+font-family: "Baloo 2", sans-serif;
+font-size: 1.1rem;
+font-weight: 900;
+cursor: pointer;
+transition: all 0.2s ease;
 }
 
 .form-button {
-  margin-top: 1rem;
-  margin-left: 1rem;
-  padding: 1rem 2rem;
-
-  border: none;
-  border-radius: 14px;
-
   background-color: #ffcf55;
   color: #292329;
-
-  font-family: "Baloo 2", sans-serif;
-  font-size: 1.1rem;
-  font-weight: 900;
-
-  cursor: pointer;
-
   box-shadow: 0 5px 0 #f7bd2a;
 
-  transition: all 0.2s ease;
 }
 
 .form-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 7px 0 #f7bd2a;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 0 #f7bd2a;
+}
+
+.form-button:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #f7bd2a;
+}
+
+
+@media (max-width: 500px) {
+
+  .game-container {
+    min-height: 100vh;
+  }
+
+  .question-container {
+    font-size: 16px;
+    padding: 0.8rem;
+  }
+
+  .choices {
+    font-size: 16px;
+    padding: 0.9rem;
+  }
+
+  .category-container {
+    font-size: 20px;
+  }
+
+  .result-card{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    border: none;
+    border-radius: 0;
+  }
 }
